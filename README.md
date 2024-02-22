@@ -1,6 +1,7 @@
 # Rick and Morty
 ![Rick and Morty!](/assets/rick_and_morty.gif "Rick and Morty")
-Para la architectura del proyecto se uso Clean architecture y MVVM para lo que seria la capa de presentación, el proyecto esta organizado siguiendo la siguiente estructura de carpetas:
+Para la architectura del proyecto se uso Clean architecture y MVVM para lo que seria la capa de presentación. 
+El proyecto esta organizado siguiendo la siguiente estructura de carpetas:
 
 <ul>
   <li>data</li>
