@@ -53,20 +53,20 @@ fun MainListScreen(
             .fillMaxSize(),
         contentAlignment = Alignment.Center
     ) {
-        if (uiState is MainListUiState.Success) {
-            MainList(
-                (uiState as MainListUiState.Success).data
-            )
-        }
-
-        if (uiState is MainListUiState.Error) {
-            MainListError(errorMessage = (uiState as MainListUiState.Error).message) {
-                viewModel.reload()
+        when(val screenState = uiState) {
+            MainListUiState.Loading -> {
+                CircularProgressIndicator(color = MaterialTheme.colorScheme.primary)
             }
-        }
-
-        if (uiState is MainListUiState.Loading) {
-            CircularProgressIndicator(color = MaterialTheme.colorScheme.primary)
+            is MainListUiState.Success -> {
+                MainList(
+                    screenState.data
+                )
+            }
+            is MainListUiState.Error -> {
+                MainListError(errorMessage = screenState.message) {
+                    viewModel.reload()
+                }
+            }
         }
     }
 }
