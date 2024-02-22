@@ -27,5 +27,10 @@ Para la architectura del proyecto se uso Clean architecture y MVVM para lo que s
   <li>utils</li>
 </ul>
 
+# Librerias utilizadas
+* Retrofit
+* Coil
+* Hilt
+
 # Observaciones
 Tomando en cuenta la simplicidad del proyecto y que no se guarda localmente los datos, solo se ha utilizado un lugar para definir las entidades (domain) para los datos, para un proyecto más grande que maneje el modo offline se utilizaria una entidad distinta para cada layer, el cual contendria solo los datos que se necesitaria en el layer, y se haria uso de mappers o extension functions para la conversion entre clases.
